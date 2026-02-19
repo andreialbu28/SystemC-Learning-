@@ -86,7 +86,7 @@ Common FMI masters include:
 
 ## Why FMI Matters for SystemC
 
-SystemC has long excelled at hardware/software co-simulation within its own ecosystem — but it has historically been a closed island. A virtual prototype built in SystemC TLM cannot directly exchange data with a thermal model in Modelica, a control system in Simulink, or a mechanical model in Adams — without custom, brittle glue code.
+SystemC has long excelled at hardware/software co-simulation within its own ecosystem but it has historically been a closed island. A virtual prototype built in SystemC TLM cannot directly exchange data with a thermal model in Modelica, a control system in Simulink, or a mechanical model in Adams — without custom, brittle glue code.
 
 FMI solves this problem. By wrapping a SystemC model as an FMU:
 

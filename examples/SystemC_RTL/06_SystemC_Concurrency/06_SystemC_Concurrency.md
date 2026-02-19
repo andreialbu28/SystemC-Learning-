@@ -55,14 +55,11 @@ Both start at time zero and follow their own schedule for the 10-second simulati
 ## Execution Timeline
 
 ```
-Time      thread_1    thread_2
-──────────────────────────────
-0 s         ✓           ✓
-2 s         ✓
-4 s         ✓           ✓
-6 s         ✓
-8 s         ✓           ✓
-10 s      (stop)      (stop)
+Thread 1: ███░░░███░░░███░░░███░░░███░░░
+Thread 2: ███████░░░░░░░███████░░░░░░░███
+Time:     0 1 2 3 4 5 6 7 8 9 10 (seconds)
+
+Legend: ██ = Running, ░░ = Waiting
 ```
 
 At time 0, both threads run their initialization (the code before the first `wait()`). After that, `thread_1` fires every 2 seconds and `thread_2` every 4 seconds. At times 4 s and 8 s they coincide — the kernel runs one then the other within the same simulation time step, with no real time between them.
