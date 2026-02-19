@@ -282,14 +282,14 @@ nav:
       - Co-simulation with Simulink: fmi/co-simulation-simulink.md
 
   - Examples:
-      - examples/index.md
-      - SystemC Core:
-          - Hello World Module: examples/core/hello-world.md
-          - Counter (SC_CTHREAD): examples/core/counter.md
-          - FIFO with SC_THREAD: examples/core/fifo.md
-          - Adder (SC_METHOD): examples/core/adder.md
+      - ../../examples/index.md
+      - SystemC RTL:
+          - SystemC Hello World: examples/SystemC_RTL/00_Hello_World/01_Hello_World.md
+          - Counter (SC_CTHREAD): examples/SystemC_RTL/counter.md
+          - FIFO with SC_THREAD: examples/SystemC_RTL/fifo.md
+          - Adder (SC_METHOD): examples/SystemC_RTL/adder.md
       - TLM:
-          - Initiator–Target (LT): examples/tlm/lt-initiator-target.md
+          - Initiator-Target (LT): examples/tlm/lt-initiator-target.md
           - Router with Multiple Targets: examples/tlm/router.md
           - AT Pipelined Bus: examples/tlm/at-pipeline.md
           - DMI Fast Memory: examples/tlm/dmi-memory.md
