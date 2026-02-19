@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblinear.a CMakeFiles/linear.dir/sca_linear_solver.cpp.o
+/usr/bin/ranlib liblinear.a

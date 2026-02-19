@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsolvertdf.a CMakeFiles/solvertdf.dir/sca_tdf_solver.cpp.o
+/usr/bin/ranlib libsolvertdf.a

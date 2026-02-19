@@ -1,0 +1,4 @@
+sca_matrix_base_typeless.lo: sca_matrix_base_typeless.cpp \
+ /usr/include/stdc-predef.h sca_matrix_base_typeless.h
+/usr/include/stdc-predef.h:
+sca_matrix_base_typeless.h:

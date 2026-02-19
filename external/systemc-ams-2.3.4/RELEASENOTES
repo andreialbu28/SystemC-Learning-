@@ -1,0 +1,7 @@
+$Id: RELEASENOTES 2320 2023-06-08 12:47:38Z pehrlich $
+
+This is SystemC-AMS 2.3.4 proof-of-concept implementation
+
+Accellera SystemC AMS Extension 2.0 and IEEE P1666.1 are fully supported
+
+See NEWS

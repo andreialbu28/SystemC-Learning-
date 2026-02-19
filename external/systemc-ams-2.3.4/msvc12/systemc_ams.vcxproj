@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4F963E9A-E82D-4874-8B82-95F868497865}</ProjectGuid>
+    <RootNamespace>systemc_ams</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/vmg %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\src;$(SYSTEMC_HOME)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4407;4244;4267;4396;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefinePreprocessorDefinitions>interface;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SYSTEMC_HOME)\$(SYSTEMC_MSVC)\SystemC\$(IntDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\src;$(ProjectDir)\..\..\systemc-2.3.4\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4407;4244;4396;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefinePreprocessorDefinitions>interface;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\systemc-2.3.4\msvc10\SystemC\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/vmg %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\src;$(ProjectDir)\..\..\systemc-2.3.4\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4407;4244;4396;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefinePreprocessorDefinitions>interface;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\systemc-2.3.4\msvc10\SystemC\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/vmg %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\src;$(ProjectDir)\..\..\systemc-2.3.4\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4407;4244;4267;4396;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <UndefinePreprocessorDefinitions>interface;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\systemc-2.3.4\msvc10\SystemC\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_domain_db.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_domain_entity.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_domain_eq.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_domain_globals.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_domain_solver.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_functions.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_noise_start.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_object.cpp" />
+    <ClCompile Include="..\src\scams\impl\analysis\ac\sca_ac_start.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_globals.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_implementation_info.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_interface.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_max_time.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_module.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_object_manager.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_parameter_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_port_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_prim_channel.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_set_default_solver_parameter.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_signed_time.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_simcontext.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_solver_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_solver_manager.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_user_solver_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_view_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_view_manager.cpp" />
+    <ClCompile Include="..\src\scams\impl\core\sca_view_object.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\conservative\sca_conservative_module.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\conservative\sca_conservative_signal.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\conservative\sca_conservative_view.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\conservative\sca_con_interactive_trace_data.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_c.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_ccc.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_cccs.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_ccl.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_ccr.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_ccvs.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_gyrator.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_ideal_transformer.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_isource.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_l.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_module.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_node.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_node_ref.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_nullor.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_r.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_c.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_isink.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_isource.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_l.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_r.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_rswitch.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_vsink.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_sc_vsource.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_c.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_isink.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_isource.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_l.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_r.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_rswitch.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_vsink.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_tdf_vsource.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_terminal.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_transmission_line.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_vcc.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_vccs.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_vcl.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_vcr.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_vcvs.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_view.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\eln\sca_eln_vsource.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_add.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_delay.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_de_demux.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_de_gain.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_de_mux.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_de_sink.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_de_source.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_dot.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_gain.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_in.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_integ.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_lsf_demux.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_lsf_gain.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_lsf_mux.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_ltf_nd.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_ltf_zp.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_module.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_out.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_signal.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_source.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_ss.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_sub.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_tdf_demux.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_tdf_gain.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_tdf_mux.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_tdf_sink.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_tdf_source.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_view.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_ct_delay_buffer.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_delay_buffer_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ct_ltf_nd_proxy.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ct_ltf_zp_proxy.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ct_vector_ss_proxy.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_default_interpolator.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ltf_nd.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ltf_zp.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_module.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_port_attributes.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_sc_in_bool.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_sc_in_sc_logic.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_signal_impl_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ss.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_trace_variable_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_view.cpp" />
+    <ClCompile Include="..\src\scams\impl\solver\linear\sca_linear_solver.cpp" />
+    <ClCompile Include="..\src\scams\impl\solver\tdf\sca_tdf_solver.cpp" />
+    <ClCompile Include="..\src\scams\impl\solver\user_solver\sca_generic_user_solver.cpp" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\ana_init.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\ana_reinit.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\ana_solv.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\ana_utilities.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\linear_direct_sparse.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\MA_generate_sparse.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\MA_lequspar.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\MA_LUdecomposition.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\MA_matfull.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\MA_matspars.c" />
+    <ClCompile Include="..\src\scams\impl\solver\util\sparse_library\sca_solve_ac_linear.c" />
+    <ClCompile Include="..\src\scams\impl\synchronization\sca_synchronization_alg.cpp" />
+    <ClCompile Include="..\src\scams\impl\synchronization\sca_synchronization_layer.cpp" />
+    <ClCompile Include="..\src\scams\impl\synchronization\sca_synchronization_layer_process.cpp" />
+    <ClCompile Include="..\src\scams\impl\synchronization\sca_sync_value_handle.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\almost_equal.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\convert_from_string.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\sca_change_matrix.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\sca_lock_free_queue.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\sca_matrix_base_complex.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\sca_matrix_base_double.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\sca_matrix_base_typeless.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\data_types\sca_pwl_stamps.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\reporting\sca_information.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_sc_trace.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_tabular_trace.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_tabular_trace_file.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_buffer.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_file.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_file_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_mode.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_object_data.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_value_handler.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_value_handler_base.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_value_handler_mm.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_trace_write_comment.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_vcd_trace.cpp" />
+    <ClCompile Include="..\src\scams\impl\util\tracing\sca_vcd_trace_file.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\scams\analysis\ac\sca_ac_functions.h" />
+    <ClInclude Include="..\src\scams\analysis\ac\sca_ac_module.h" />
+    <ClInclude Include="..\src\scams\analysis\ac\sca_ac_noise_start.h" />
+    <ClInclude Include="..\src\scams\analysis\ac\sca_ac_object.h" />
+    <ClInclude Include="..\src\scams\analysis\ac\sca_ac_start.h" />
+    <ClInclude Include="..\src\scams\core\sca_assign_from_proxy.h" />
+    <ClInclude Include="..\src\scams\core\sca_assign_to_proxy.h" />
+    <ClInclude Include="..\src\scams\core\sca_implementation_info.h" />
+    <ClInclude Include="..\src\scams\core\sca_interface.h" />
+    <ClInclude Include="..\src\scams\core\sca_max_time.h" />
+    <ClInclude Include="..\src\scams\core\sca_module.h" />
+    <ClInclude Include="..\src\scams\core\sca_parameter.h" />
+    <ClInclude Include="..\src\scams\core\sca_parameter_base.h" />
+    <ClInclude Include="..\src\scams\core\sca_physical_domain_interface.h" />
+    <ClInclude Include="..\src\scams\core\sca_port.h" />
+    <ClInclude Include="..\src\scams\core\sca_prim_channel.h" />
+    <ClInclude Include="..\src\scams\core\sca_set_default_solver_parameter.h" />
+    <ClInclude Include="..\src\scams\core\sca_time.h" />
+    <ClInclude Include="..\src\scams\core\sca_user_solver_base.h" />
+    <ClInclude Include="..\src\scams\impl\analysis\ac\sca_ac_domain_db.h" />
+    <ClInclude Include="..\src\scams\impl\analysis\ac\sca_ac_domain_entity.h" />
+    <ClInclude Include="..\src\scams\impl\analysis\ac\sca_ac_domain_eq.h" />
+    <ClInclude Include="..\src\scams\impl\analysis\ac\sca_ac_domain_globals.h" />
+    <ClInclude Include="..\src\scams\impl\analysis\ac\sca_ac_domain_solver.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_globals.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_object_manager.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_port_base.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_port_impl.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_signed_time.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_simcontext.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_solver_base.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_solver_manager.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_user_extensions.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_view_base.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_view_manager.h" />
+    <ClInclude Include="..\src\scams\impl\core\sca_view_object.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\conservative\sca_conservative_interface.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\conservative\sca_conservative_module.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\conservative\sca_conservative_signal.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\conservative\sca_conservative_view.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\conservative\sca_con_interactive_trace_data.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\eln\sca_eln_view.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\lsf\sca_lsf_view.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_ct_delay_buffer.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_delay_buffer_base.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_dt_delay_buffer.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ct_ltf_nd_proxy.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ct_ltf_zp_proxy.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_ct_vector_ss_proxy.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_port_attributes.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_port_impl.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_signal_impl.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_signal_impl_base.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_trace_variable_base.h" />
+    <ClInclude Include="..\src\scams\impl\predefined_moc\tdf\sca_tdf_view.h" />
+    <ClInclude Include="..\src\scams\impl\solver\linear\sca_linear_equation_if.h" />
+    <ClInclude Include="..\src\scams\impl\solver\linear\sca_linear_solver.h" />
+    <ClInclude Include="..\src\scams\impl\solver\linear\sca_linear_solver_parameters.h" />
+    <ClInclude Include="..\src\scams\impl\solver\tdf\sca_tdf_solver.h" />
+    <ClInclude Include="..\src\scams\impl\solver\user_solver\sca_generic_user_solver.h" />
+    <ClInclude Include="..\src\scams\impl\solver\util\sparse_library\ana_solv_data.h" />
+    <ClInclude Include="..\src\scams\impl\solver\util\sparse_library\linear_analog_solver.h" />
+    <ClInclude Include="..\src\scams\impl\solver\util\sparse_library\linear_direct_sparse.h" />
+    <ClInclude Include="..\src\scams\impl\solver\util\sparse_library\ma_sparse.h" />
+    <ClInclude Include="..\src\scams\impl\solver\util\sparse_library\ma_typedef.h" />
+    <ClInclude Include="..\src\scams\impl\solver\util\sparse_library\ma_util.h" />
+    <ClInclude Include="..\src\scams\impl\solver\util\sparse_library\sca_solve_ac_linear.h" />
+    <ClInclude Include="..\src\scams\impl\synchronization\sca_synchronization_alg.h" />
+    <ClInclude Include="..\src\scams\impl\synchronization\sca_synchronization_layer.h" />
+    <ClInclude Include="..\src\scams\impl\synchronization\sca_synchronization_layer_process.h" />
+    <ClInclude Include="..\src\scams\impl\synchronization\sca_synchronization_obj_if.h" />
+    <ClInclude Include="..\src\scams\impl\synchronization\sca_sync_value_handle.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\almost_equal.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\convert_from_string.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_change_matrix.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_function_vector.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_lock_free_queue.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_matrix_base.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_matrix_base_complex.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_matrix_base_double.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_matrix_base_typeless.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_method_list.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_method_object.h" />
+    <ClInclude Include="..\src\scams\impl\util\data_types\sca_pwl_stamps.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_sc_trace.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_tabular_trace.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_trace_buffer.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_trace_file_base.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_trace_object_data.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_trace_value_handler.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_trace_value_handler_base.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_trace_value_handler_mm.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_type_explorer.h" />
+    <ClInclude Include="..\src\scams\impl\util\tracing\sca_vcd_trace.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_c.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_ccc.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_cccs.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_ccl.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_ccr.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_ccvs.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_gyrator.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_ideal_transformer.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_isource.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_l.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_module.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_node.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_node_if.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_node_ref.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_nullor.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_r.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_c.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_isink.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_isource.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_l.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_r.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_rswitch.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_vsink.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_sc_vsource.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_c.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_isink.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_isource.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_l.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_r.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_rswitch.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_vsink.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_tdf_vsource.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_terminal.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_transmission_line.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_vcc.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_vccs.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_vcl.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_vcr.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_vcvs.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\eln\sca_eln_vsource.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_add.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_delay.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_de_demux.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_de_gain.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_de_mux.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_de_sink.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_de_source.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_dot.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_gain.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_in.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_integ.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_lsf_demux.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_lsf_gain.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_lsf_mux.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_ltf_nd.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_ltf_zp.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_module.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_out.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_signal.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_signal_if.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_source.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_ss.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_sub.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_tdf_demux.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_tdf_gain.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_tdf_mux.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_tdf_sink.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\lsf\sca_lsf_tdf_source.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_ct_proxy.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_ct_vector_proxy.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_default_interpolator.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_in.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_ltf_nd.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_ltf_zp.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_module.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_out.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_out_base.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_out_ct_cut.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_out_dt_cut.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_sc_in.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_sc_in_bool.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_sc_in_sc_logic.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_sc_out.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_signal.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_signal_if.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_ss.h" />
+    <ClInclude Include="..\src\scams\predefined_moc\tdf\sca_tdf_trace_variable.h" />
+    <ClInclude Include="..\src\scams\utility\data_types\sca_complex.h" />
+    <ClInclude Include="..\src\scams\utility\data_types\sca_constants.h" />
+    <ClInclude Include="..\src\scams\utility\data_types\sca_create_vector.h" />
+    <ClInclude Include="..\src\scams\utility\data_types\sca_matrix.h" />
+    <ClInclude Include="..\src\scams\utility\data_types\sca_vector.h" />
+    <ClInclude Include="..\src\scams\utility\reporting\sca_information.h" />
+    <ClInclude Include="..\src\scams\utility\tracing\sca_tabular_trace_file.h" />
+    <ClInclude Include="..\src\scams\utility\tracing\sca_trace.h" />
+    <ClInclude Include="..\src\scams\utility\tracing\sca_traceable_object.h" />
+    <ClInclude Include="..\src\scams\utility\tracing\sca_trace_file.h" />
+    <ClInclude Include="..\src\scams\utility\tracing\sca_trace_mode.h" />
+    <ClInclude Include="..\src\scams\utility\tracing\sca_trace_write_comment.h" />
+    <ClInclude Include="..\src\scams\utility\tracing\sca_vcd_trace_file.h" />
+    <ClInclude Include="..\src\src\config.h" />
+    <ClInclude Include="..\src\systemc-ams.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

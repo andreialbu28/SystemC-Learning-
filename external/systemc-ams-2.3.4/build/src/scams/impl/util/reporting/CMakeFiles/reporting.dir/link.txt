@@ -1,0 +1,2 @@
+/usr/bin/ar qc libreporting.a CMakeFiles/reporting.dir/sca_information.cpp.o
+/usr/bin/ranlib libreporting.a

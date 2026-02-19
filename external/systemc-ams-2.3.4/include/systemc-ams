@@ -1,0 +1,290 @@
+/*****************************************************************************
+
+    Copyright 2010-2014
+    Fraunhofer-Gesellschaft zur Foerderung der angewandten Forschung e.V.
+
+    Copyright 2015-2020
+    COSEDA Technologies GmbH
+    
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+ *****************************************************************************/
+
+/*****************************************************************************
+
+  systemc-ams - Top-level namespace-based include file for the SystemC AMS library.
+
+  Original Author: Karsten Einwich COSEDA Technologies GmbH
+
+  Created on: 03.03.2009
+
+   SVN Version       :  $Revision: 2320 $
+   SVN last checkin  :  $Date: 2023-06-08 12:47:38 +0000 (Thu, 08 Jun 2023) $
+   SVN checkin by    :  $Author: pehrlich $
+   SVN Id            :  $Id: systemc-ams 2320 2023-06-08 12:47:38Z pehrlich $
+
+ *****************************************************************************/
+/*
+   The header file named systemc-ams shall add the names sca_core, sca_tdf, sca_lsf,
+   sca_eln, sca_ac and sca_util to the declarative region in which it is included, 
+   and these names only. The header file systemc-ams shall not introduce into the 
+   declarative region in which it is included any other names from this standard or 
+   any names from the standard C or C++ libraries. The header file systemc-ams shall 
+   include the header file systemc.
+
+*/
+/*****************************************************************************/
+
+#ifndef SYSTEMCAMS_
+#define SYSTEMCAMS_
+
+//implementation specific section
+#ifndef _USE_MATH_DEFINES
+#define _USE_MATH_DEFINES
+#endif
+//end implementation specific
+
+
+#include "systemc"
+
+
+//implementation specific section
+#include <string>
+#include <iostream>
+#include <fstream>
+#include<sstream>
+#include<complex>
+#include <vector>
+#include <set>
+#include <map>
+#include <valarray>
+#include <iomanip>
+#include <limits>
+#include <utility>
+#include <cmath>
+#include <cstdint>
+
+#ifndef M_PI
+#define M_PI  (3.141592653589793238463)
+#endif 
+
+//end implementation specific
+
+/////////////////// core /////////////////////////////////
+
+
+#include "scams/analysis/ac/sca_ac_object.h"
+#include "scams/analysis/ac/sca_ac_module.h"
+
+#include "scams/core/sca_physical_domain_interface.h"
+#include "scams/core/sca_time.h"
+#include "scams/impl/core/sca_signed_time.h" //implementation defined
+#include "scams/core/sca_max_time.h"
+#include "scams/core/sca_assign_from_proxy.h"
+#include "scams/core/sca_assign_to_proxy.h"
+
+///////////// utilities //////////////////////////////////
+
+
+//include utility functions first - may used by the following declarations
+#include "scams/utility/data_types/sca_complex.h"
+#include "scams/utility/data_types/sca_constants.h"
+
+#include "scams/impl/solver/linear/sca_linear_solver_parameters.h"
+
+//begin implementation specific
+#include "scams/impl/util/data_types/sca_method_object.h"
+#include "scams/impl/util/data_types/sca_matrix_base_typeless.h"
+#include "scams/impl/util/data_types/sca_matrix_base.h"
+#include "scams/impl/util/data_types/sca_matrix_base_double.h"
+#include "scams/impl/util/data_types/sca_matrix_base_complex.h"
+#include "scams/impl/util/data_types/convert_from_string.h"
+#include "scams/impl/util/tracing/sca_type_explorer.h"
+#include "scams/impl/util/tracing/sca_trace_value_handler_base.h"
+#include "scams/impl/util/tracing/sca_trace_value_handler.h"
+#include "scams/impl/util/tracing/sca_trace_buffer.h"
+#include "scams/impl/util/tracing/sca_trace_object_data.h"
+
+//end implementation specific
+
+//include utility functions first - may used by the following declarations
+#include "scams/utility/data_types/sca_matrix.h"
+#include "scams/utility/data_types/sca_vector.h"
+#include "scams/utility/data_types/sca_create_vector.h"
+
+
+#include "scams/utility/tracing/sca_traceable_object.h"
+
+
+#include "scams/utility/tracing/sca_trace_mode.h"
+//begin implementation specific
+#include "scams/impl/util/tracing/sca_trace_file_base.h"
+//end implementation specific
+
+//begin implementation specific
+#include "scams/impl/util/tracing/sca_sc_trace.h"
+//end implementation specific
+
+#include "scams/utility/tracing/sca_trace_file.h"
+#include "scams/utility/tracing/sca_trace_write_comment.h"
+#include "scams/utility/tracing/sca_trace.h"
+#include "scams/utility/tracing/sca_vcd_trace_file.h"
+#include "scams/utility/tracing/sca_tabular_trace_file.h"
+
+
+#include "scams/utility/reporting/sca_information.h"
+
+
+
+
+
+
+/////////////////// core /////////////////////////////////
+#include "scams/core/sca_interface.h"
+#include "scams/core/sca_user_solver_base.h"
+#include "scams/core/sca_module.h"
+
+//begin implementation specific
+#include "scams/impl/core/sca_port_base.h"
+#include "scams/impl/core/sca_port_impl.h"
+//end implementation specific
+
+#include "scams/core/sca_parameter_base.h"
+#include "scams/core/sca_parameter.h"
+#include "scams/core/sca_port.h"
+#include "scams/core/sca_prim_channel.h"
+#include "scams/core/sca_implementation_info.h"
+
+#include "scams/core/sca_set_default_solver_parameter.h"
+
+
+////////////////// predefined MoC ///////////////////////////
+
+//begin implementation specific
+#include "scams/predefined_moc/tdf/sca_tdf_signal_if.h"
+#include "scams/impl/predefined_moc/tdf/sca_tdf_port_attributes.h"
+#include "scams/impl/predefined_moc/tdf/sca_tdf_signal_impl_base.h"
+#include "scams/impl/predefined_moc/tdf/sca_tdf_signal_impl.h"
+#include "scams/impl/predefined_moc/tdf/sca_tdf_trace_variable_base.h"
+#include "scams/impl/synchronization/sca_sync_value_handle.h"
+#include "scams/impl/predefined_moc/tdf/sca_tdf_signal_impl_base.h"
+#include "scams/impl/predefined_moc/tdf/sca_tdf_port_impl.h"
+#include "scams/impl/predefined_moc/tdf/sca_delay_buffer_base.h"
+#include "scams/impl/predefined_moc/tdf/sca_dt_delay_buffer.h"
+
+#include "scams/impl/predefined_moc/conservative/sca_conservative_module.h"
+#include "scams/impl/predefined_moc/conservative/sca_conservative_interface.h"
+#include "scams/impl/predefined_moc/conservative/sca_conservative_interface.h"
+#include "scams/impl/predefined_moc/conservative/sca_conservative_signal.h"
+
+
+//end implementation specific
+
+#include "scams/predefined_moc/tdf/sca_tdf_sc_in.h"
+#include "scams/predefined_moc/tdf/sca_tdf_sc_in_bool.h"
+#include "scams/predefined_moc/tdf/sca_tdf_sc_in_sc_logic.h"
+#include "scams/predefined_moc/tdf/sca_tdf_module.h"
+#include "scams/predefined_moc/tdf/sca_tdf_signal.h"
+#include "scams/predefined_moc/tdf/sca_tdf_in.h"
+#include "scams/predefined_moc/tdf/sca_tdf_sc_out.h"
+#include "scams/predefined_moc/tdf/sca_tdf_default_interpolator.h"
+#include "scams/predefined_moc/tdf/sca_tdf_out_base.h"
+#include "scams/predefined_moc/tdf/sca_tdf_out.h"
+#include "scams/predefined_moc/tdf/sca_tdf_out_ct_cut.h"
+#include "scams/predefined_moc/tdf/sca_tdf_out_dt_cut.h"
+#include "scams/predefined_moc/tdf/sca_tdf_ct_proxy.h"
+#include "scams/predefined_moc/tdf/sca_tdf_ltf_nd.h"
+#include "scams/predefined_moc/tdf/sca_tdf_ltf_zp.h"
+#include "scams/predefined_moc/tdf/sca_tdf_ct_vector_proxy.h"
+#include "scams/predefined_moc/tdf/sca_tdf_ss.h"
+#include "scams/predefined_moc/tdf/sca_tdf_trace_variable.h"
+
+#include "scams/predefined_moc/lsf/sca_lsf_module.h"
+#include "scams/predefined_moc/lsf/sca_lsf_signal_if.h"
+#include "scams/predefined_moc/lsf/sca_lsf_signal.h"
+#include "scams/predefined_moc/lsf/sca_lsf_in.h"
+#include "scams/predefined_moc/lsf/sca_lsf_out.h"
+#include "scams/predefined_moc/lsf/sca_lsf_add.h"
+#include "scams/predefined_moc/lsf/sca_lsf_delay.h"
+#include "scams/predefined_moc/lsf/sca_lsf_dot.h"
+#include "scams/predefined_moc/lsf/sca_lsf_gain.h"
+#include "scams/predefined_moc/lsf/sca_lsf_integ.h"
+#include "scams/predefined_moc/lsf/sca_lsf_ltf_nd.h"
+#include "scams/predefined_moc/lsf/sca_lsf_ltf_zp.h"
+#include "scams/predefined_moc/lsf/sca_lsf_de_demux.h"
+#include "scams/predefined_moc/lsf/sca_lsf_de_gain.h"
+#include "scams/predefined_moc/lsf/sca_lsf_de_mux.h"
+#include "scams/predefined_moc/lsf/sca_lsf_de_sink.h"
+#include "scams/predefined_moc/lsf/sca_lsf_de_source.h"
+#include "scams/predefined_moc/lsf/sca_lsf_source.h"
+#include "scams/predefined_moc/lsf/sca_lsf_ss.h"
+#include "scams/predefined_moc/lsf/sca_lsf_sub.h"
+#include "scams/predefined_moc/lsf/sca_lsf_tdf_demux.h"
+#include "scams/predefined_moc/lsf/sca_lsf_tdf_gain.h"
+#include "scams/predefined_moc/lsf/sca_lsf_tdf_mux.h"
+#include "scams/predefined_moc/lsf/sca_lsf_tdf_sink.h"
+#include "scams/predefined_moc/lsf/sca_lsf_tdf_source.h"
+#include "scams/predefined_moc/lsf/sca_lsf_lsf_gain.h"
+#include "scams/predefined_moc/lsf/sca_lsf_lsf_demux.h"
+#include "scams/predefined_moc/lsf/sca_lsf_lsf_mux.h"
+
+
+#include "scams/predefined_moc/eln/sca_eln_module.h"  
+#include "scams/predefined_moc/eln/sca_eln_node_if.h"
+#include "scams/predefined_moc/eln/sca_eln_node.h"
+#include "scams/predefined_moc/eln/sca_eln_node_ref.h"
+#include "scams/predefined_moc/eln/sca_eln_terminal.h"
+#include "scams/predefined_moc/eln/sca_eln_c.h"
+#include "scams/predefined_moc/eln/sca_eln_cccs.h"
+#include "scams/predefined_moc/eln/sca_eln_ccvs.h"
+#include "scams/predefined_moc/eln/sca_eln_gyrator.h"
+#include "scams/predefined_moc/eln/sca_eln_ideal_transformer.h"
+#include "scams/predefined_moc/eln/sca_eln_isource.h"
+#include "scams/predefined_moc/eln/sca_eln_l.h"
+#include "scams/predefined_moc/eln/sca_eln_nullor.h"
+#include "scams/predefined_moc/eln/sca_eln_r.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_c.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_isink.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_isource.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_l.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_r.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_rswitch.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_vsink.h"
+#include "scams/predefined_moc/eln/sca_eln_sc_vsource.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_c.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_isink.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_isource.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_l.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_r.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_rswitch.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_vsink.h"
+#include "scams/predefined_moc/eln/sca_eln_tdf_vsource.h"
+#include "scams/predefined_moc/eln/sca_eln_transmission_line.h"
+#include "scams/predefined_moc/eln/sca_eln_vccs.h"
+#include "scams/predefined_moc/eln/sca_eln_vcvs.h"
+#include "scams/predefined_moc/eln/sca_eln_vsource.h"
+#include "scams/predefined_moc/eln/sca_eln_vcr.h"
+#include "scams/predefined_moc/eln/sca_eln_vcc.h"
+#include "scams/predefined_moc/eln/sca_eln_vcl.h"
+#include "scams/predefined_moc/eln/sca_eln_ccr.h"
+#include "scams/predefined_moc/eln/sca_eln_ccc.h"
+#include "scams/predefined_moc/eln/sca_eln_ccl.h"
+
+
+////////////////// analysis ///////////////////////////
+
+#include "scams/analysis/ac/sca_ac_functions.h"
+#include "scams/analysis/ac/sca_ac_start.h"
+#include "scams/analysis/ac/sca_ac_noise_start.h"
+#endif

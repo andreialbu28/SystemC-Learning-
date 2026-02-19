@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/scx_mutex_w_policy.dir/scx_mutex_w_policy.cpp.o -o scx_mutex_w_policy  -Wl,-rpath,/home/andrei28/TCAD_journal/external/systemc-3.0.2/build/src ../../../../src/libsystemc.so.3.0.2 

@@ -1,0 +1,63 @@
+# Install script for directory: /home/andrei28/systemc-ams-2.3.4/src/scams/core
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/usr/local/systemc-ams-2.3.4")
+endif()
+string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  if(BUILD_TYPE)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  else()
+    set(CMAKE_INSTALL_CONFIG_NAME "")
+  endif()
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+endif()
+
+# Set the component getting installed.
+if(NOT CMAKE_INSTALL_COMPONENT)
+  if(COMPONENT)
+    message(STATUS "Install component: \"${COMPONENT}\"")
+    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  else()
+    set(CMAKE_INSTALL_COMPONENT)
+  endif()
+endif()
+
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/scams/core" TYPE FILE FILES
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_assign_from_proxy.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_assign_to_proxy.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_implementation_info.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_interface.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_max_time.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_module.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_parameter_base.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_parameter.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_physical_domain_interface.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_port.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_prim_channel.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_set_default_solver_parameter.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_time.h"
+    "/home/andrei28/systemc-ams-2.3.4/src/scams/core/sca_user_solver_base.h"
+    )
+endif()
+

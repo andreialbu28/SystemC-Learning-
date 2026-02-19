@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdata_types.a CMakeFiles/data_types.dir/almost_equal.cpp.o CMakeFiles/data_types.dir/convert_from_string.cpp.o CMakeFiles/data_types.dir/sca_change_matrix.cpp.o CMakeFiles/data_types.dir/sca_lock_free_queue.cpp.o CMakeFiles/data_types.dir/sca_matrix_base_complex.cpp.o CMakeFiles/data_types.dir/sca_matrix_base_double.cpp.o CMakeFiles/data_types.dir/sca_matrix_base_typeless.cpp.o CMakeFiles/data_types.dir/sca_pwl_stamps.cpp.o
+/usr/bin/ranlib libdata_types.a

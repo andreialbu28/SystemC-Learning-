@@ -1,0 +1,74 @@
+SystemC-AMS NEWS -- history of user visible changes
+
+SystemC-AMS version 2.3.4
+    *SystemC 2.3.4 compatibility
+    *Support of the newest compiler (clang 16, gcc12, Visual 2022)
+    *Compatible with Accellera SystemC AMS regression tests (should run without any error)
+    *Compiler must support C++11 (e.g. > gcc4.9)
+    *TDF scheduler re-implemented
+        -full static schedule (also for SystemC synchronization)
+        -TDF cluster executed within method processes (before they were executed in thread processes)
+        -Slight performance improvement ~10%
+    *ELN reference nodes are not anymore ignored for eln clustering
+        -can be disabled (old behavior) by configure option:  --disable-reference_node_clustering
+    *Performance statistics added
+        -can be disabled using the configure option:  --disable-performance_statistics
+        -influence to performance seems to be below 5%
+    *Experimental parallel tracing
+        -can be enabled by configure option --enable-parallel_tracing
+        -performance gain can be significant if tracing dominated the runtime
+        -due the datatypes of the Accellera SystemC implementation can't be read thread safe
+         in seldom cases the simulation crashes if SystemC datatypes are traced
+        -if you use parallel tracing you should always close the trace file - otherwise may large portions are not written
+    *SCA_DISABLE_PORT_ACCESS_CHECK - if this defined during model compilation the check whether the port methods are used in
+     the allowed context are disabled (e.g. port write only in the processing callback), in dependency of the model, this can 
+     lead to a considerable performance gain
+    *Numerous smaller bug fixes
+    *All Warnings and most of the clang sanitizer issues fixed - recommendation : compile always with -Wall
+    
+
+SystemC-AMS version 2.3
+    *SystemC 2.3.3 compatibility
+    *Several memory leaks fixed
+    *Several bugs fixed
+    *Recursive algorithm for eln equation setup removed
+        ->size limit due stack overflow removed
+    *Performance optimizations
+        -TDF buffer access
+        -equation system re-initializations
+    *Feature preview for standard update
+        -generalized AC
+        -piece wise linear (PWL) for eln and lsf
+        -physical units
+        -solver parameter
+            -algorithm : euler/default
+            -reinitialization_steps : <number> (default: 1)
+        -interactive debug feature 
+        -implementation of dump/print methods
+    *Tabular tracing for sca_complex
+
+
+SystemC-AMS version 2.1
+    *Release
+    *IEEE P1666.1 compliant
+    *Bug fixes
+    *some preview feature
+
+SystemC-AMS version 2.0Beta1
+    * All SystemC-AMS 2.0 feature implemented
+    * Bug fixes
+    
+SystemC-AMS version 2.0Alpha2
+
+    * first version with part of SystemC--AMS 2.0 feature 
+    * Bugfixes
+
+SystemC-AMS version 1.0Beta2
+
+	* bug fixes
+	* improved error messages
+	* Microsoft Visual support 
+
+SystemC-AMS version 2.0 Alpha1
+    * first implementation with most of the 2.0 feature
+    * not for productive usage

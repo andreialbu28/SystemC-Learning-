@@ -1,0 +1,5 @@
+MA_matfull.lo: MA_matfull.c /usr/include/stdc-predef.h ma_util.h \
+ ma_typedef.h
+/usr/include/stdc-predef.h:
+ma_util.h:
+ma_typedef.h:

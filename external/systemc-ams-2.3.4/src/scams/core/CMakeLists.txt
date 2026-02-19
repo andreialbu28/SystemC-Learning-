@@ -1,0 +1,16 @@
+install_headers(
+	sca_assign_from_proxy.h
+	sca_assign_to_proxy.h
+	sca_implementation_info.h
+	sca_interface.h
+	sca_max_time.h
+	sca_module.h
+	sca_parameter_base.h
+	sca_parameter.h
+	sca_physical_domain_interface.h
+	sca_port.h
+	sca_prim_channel.h
+	sca_set_default_solver_parameter.h
+	sca_time.h
+	sca_user_solver_base.h
+	)

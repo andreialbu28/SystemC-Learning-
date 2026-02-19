@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/sc_ttd.dir/main.cpp.o -o sc_ttd  -Wl,-rpath,/usr/local/systemc-2.3.3/build/src ../../../../src/libsystemc.so.2.3.3 

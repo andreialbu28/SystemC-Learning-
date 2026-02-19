@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconservative.a CMakeFiles/conservative.dir/sca_con_interactive_trace_data.cpp.o CMakeFiles/conservative.dir/sca_conservative_module.cpp.o CMakeFiles/conservative.dir/sca_conservative_signal.cpp.o CMakeFiles/conservative.dir/sca_conservative_view.cpp.o
+/usr/bin/ranlib libconservative.a

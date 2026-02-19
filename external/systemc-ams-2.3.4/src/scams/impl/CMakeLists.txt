@@ -1,0 +1,6 @@
+add_subdirectory(analysis)
+add_subdirectory(core)
+add_subdirectory(predefined_moc)
+add_subdirectory(solver)
+add_subdirectory(synchronization)
+add_subdirectory(util)

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/pkt_switch.dir/main.cpp.o CMakeFiles/pkt_switch.dir/fifo.cpp.o CMakeFiles/pkt_switch.dir/sender.cpp.o CMakeFiles/pkt_switch.dir/switch_clk.cpp.o CMakeFiles/pkt_switch.dir/switch.cpp.o CMakeFiles/pkt_switch.dir/receiver.cpp.o -o pkt_switch  -Wl,-rpath,/usr/local/systemc-2.3.3/build/src ../../../src/libsystemc.so.2.3.3 

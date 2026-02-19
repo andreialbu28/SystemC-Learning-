@@ -1,0 +1,5 @@
+add_subdirectory(analysis)
+add_subdirectory(core)
+add_subdirectory(impl)
+add_subdirectory(predefined_moc)
+add_subdirectory(utility)

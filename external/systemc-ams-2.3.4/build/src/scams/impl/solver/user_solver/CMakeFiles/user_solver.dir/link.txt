@@ -1,0 +1,2 @@
+/usr/bin/ar qc libuser_solver.a CMakeFiles/user_solver.dir/sca_generic_user_solver.cpp.o
+/usr/bin/ranlib libuser_solver.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/simple_fifo.dir/simple_fifo.cpp.o -o simple_fifo  -Wl,-rpath,/usr/local/systemc-2.3.3/build/src ../../../src/libsystemc.so.2.3.3 

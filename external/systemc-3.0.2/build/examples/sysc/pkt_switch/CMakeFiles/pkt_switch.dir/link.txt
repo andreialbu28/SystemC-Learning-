@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/pkt_switch.dir/main.cpp.o CMakeFiles/pkt_switch.dir/fifo.cpp.o CMakeFiles/pkt_switch.dir/sender.cpp.o CMakeFiles/pkt_switch.dir/switch_clk.cpp.o CMakeFiles/pkt_switch.dir/switch.cpp.o CMakeFiles/pkt_switch.dir/receiver.cpp.o -o pkt_switch  -Wl,-rpath,/home/andrei28/TCAD_journal/external/systemc-3.0.2/build/src ../../../src/libsystemc.so.3.0.2 

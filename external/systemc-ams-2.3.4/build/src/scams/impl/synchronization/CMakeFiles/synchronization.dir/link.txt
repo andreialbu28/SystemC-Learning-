@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsynchronization.a CMakeFiles/synchronization.dir/sca_sync_value_handle.cpp.o CMakeFiles/synchronization.dir/sca_synchronization_alg.cpp.o CMakeFiles/synchronization.dir/sca_synchronization_layer.cpp.o CMakeFiles/synchronization.dir/sca_synchronization_layer_process.cpp.o
+/usr/bin/ranlib libsynchronization.a
