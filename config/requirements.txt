@@ -1,0 +1,4 @@
+mkdocs == 1.6.1
+matplotlib == 3.10.0
+numpy == 2.3.0
+pandas == 2.3.0
