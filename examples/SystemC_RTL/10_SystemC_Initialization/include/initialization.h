@@ -1,7 +1,7 @@
 #ifndef INITIALIZATION_H
 #define INITIALIZATION_H
 
-#include <systemc.h>
+#include "systemc.h"
 #include <iostream>
 
 SC_MODULE(INITIALIZATION) {

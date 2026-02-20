@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PROJECT_ROOT="$( realpath "$SCRIPT_DIR/../../.." )"
+PROJECT_ROOT="$( realpath "$SCRIPT_DIR/../../../.." )"
 
 # Compiler and flags
 CXX=g++
@@ -13,7 +13,7 @@ LDFLAGS="-L. -L$PROJECT_ROOT/external/systemc-3.0.2/install/lib -Wl,-rpath,$PROJ
 # Build directory
 BUILD_DIR=build
 TARGET=$BUILD_DIR/out
-OBJS=" $BUILD_DIR/mutex.o $BUILD_DIR/main.o "
+OBJS=" $BUILD_DIR/signal.o $BUILD_DIR/main.o "
 
 # Functions
 compile_cpp() {
@@ -56,7 +56,7 @@ case "$1" in
             mkdir $BUILD_DIR
         fi
         # Compile all relevant .cpp and .c files
-        compile_cpp src/mutex.cpp $BUILD_DIR/mutex.o
+        compile_cpp src/signal.cpp $BUILD_DIR/signal.o
         compile_cpp src/main.cpp $BUILD_DIR/main.o
         link
         ;;
